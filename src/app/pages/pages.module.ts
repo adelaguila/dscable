@@ -7,12 +7,16 @@ import { SharedModule } from '../shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TercerosComponent } from './terceros/terceros.component';
 import { PagesComponent } from './pages.component';
+import { ViasComponent } from './vias/vias.component';
+import { PlanesComponent } from './planes/planes.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     TercerosComponent,
-    PagesComponent
+    PagesComponent,
+    ViasComponent,
+    PlanesComponent
   ],
   imports: [
     CommonModule,

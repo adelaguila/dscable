@@ -3,19 +3,31 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TercerosComponent } from './terceros/terceros.component';
 import { PagesComponent } from './pages.component';
+import { PlanesComponent } from './planes/planes.component';
+import { ViasComponent } from './vias/vias.component';
+import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
   {
     path: 'admin',
     component: PagesComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',
-        component: DashboardComponent,
+        component: DashboardComponent, data: { titulo: 'Dashboard'}
       },
       {
         path: 'terceros',
-        component: TercerosComponent,
+        component: TercerosComponent, data: { titulo: 'Terceros'}
+      },
+      {
+        path: 'planes',
+        component: PlanesComponent, data: { titulo: 'Planes'}
+      },
+      {
+        path: 'vias',
+        component: ViasComponent, data: { titulo: 'Vias'}
       }
     ],
   },

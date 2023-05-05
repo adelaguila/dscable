@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 import { PagesModule } from './pages/pages.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
@@ -17,7 +19,8 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
     BrowserModule,
     AppRoutingModule,
     AuthModule,
-    PagesModule
+    PagesModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
