@@ -1,37 +1,39 @@
 <aside class="left-sidebar">
-    <div class="scroll-sidebar">
-        <nav class="sidebar-nav">
-            <ul id="sidebarnav">
-                <li class="user-profile">
-                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img src="./assets/images/users/profile.png" alt="user" /><span class="hide-menu">Steave Jobs
+  <div class="scroll-sidebar">
+    <nav class="sidebar-nav">
+      <ul id="sidebarnav">
+        <li class="user-profile">
+          <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img
+              src="./assets/images/users/profile.png" alt="user" /><span class="hide-menu">Steave Jobs
             </span></a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="javascript:void()">My Profile </a></li>
-                        <li><a href="javascript:void()">My Balance</a></li>
-                        <li><a href="javascript:void()">Inbox</a></li>
-                        <li><a href="javascript:void()">Account Setting</a></li>
-                        <li><a (click)="logout()" class="cursor">Logout</a></li>
-                    </ul>
-                </li>
-                <li class="nav-devider"></li>
-                <li class="nav-small-cap">PRINCIPAL</li>
-                <li *ngFor="let item of menuItems">
-                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
-                        <i class="mdi mdi-gauge"></i>
-                        <span class="hide-menu">{{ item.titulo }}
+          <ul aria-expanded="false" class="collapse">
+            <li><a href="javascript:void()">My Profile </a></li>
+            <li><a href="javascript:void()">My Balance</a></li>
+            <li><a href="javascript:void()">Inbox</a></li>
+            <li><a href="javascript:void()">Account Setting</a></li>
+            <li><a (click)="logout()" class="cursor">Logout</a></li>
+          </ul>
+        </li>
+        <li class="nav-devider"></li>
+        <li class="nav-small-cap">PRINCIPAL</li>
+        <li *ngFor="let item of menuItems">
+          <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+            <i class="mdi mdi-gauge"></i>
+            <span class="hide-menu">{{ item.titulo }}
               <span class="label label-rouded label-themecolor pull-right">{{
                 item.submenu.length
-              }}</span>
-                        </span>
-                    </a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li *ngFor="let subitem of item.submenu">
-                            <a [routerLink]="subitem.url" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ subitem.titulo }}
+                }}</span>
+            </span>
+          </a>
+          <ul aria-expanded="false" class="collapse">
+            <li *ngFor="let subitem of item.submenu">
+              <a [routerLink]="subitem.url" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{
+                subitem.titulo }}
               </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </aside>

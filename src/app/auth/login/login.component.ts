@@ -42,7 +42,6 @@ export class LoginComponent {
       (err) => {
         console.log(err);
         Swal.fire('Error', err.error.message.toString());
-
       }
     );
     // this.router.navigateByUrl('/');
