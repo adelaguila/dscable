@@ -6,6 +6,7 @@ import { PagesComponent } from './pages.component';
 import { PlanesComponent } from './planes/planes.component';
 import { ViasComponent } from './vias/vias.component';
 import { AuthGuard } from '../guards/auth.guard';
+import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
       {
         path: 'vias',
         component: ViasComponent, data: { titulo: 'Vias'}
+      },
+      {
+        path: 'perfil',
+        component: PerfilComponent, data: { titulo: 'Perfil'}
       }
     ],
   },

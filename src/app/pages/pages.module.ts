@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
@@ -9,6 +10,8 @@ import { TercerosComponent } from './terceros/terceros.component';
 import { PagesComponent } from './pages.component';
 import { ViasComponent } from './vias/vias.component';
 import { PlanesComponent } from './planes/planes.component';
+import { PerfilComponent } from './perfil/perfil.component';
+
 
 @NgModule({
   declarations: [
@@ -16,10 +19,13 @@ import { PlanesComponent } from './planes/planes.component';
     TercerosComponent,
     PagesComponent,
     ViasComponent,
-    PlanesComponent
+    PlanesComponent,
+    PerfilComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule,
     SharedModule,
   ],
