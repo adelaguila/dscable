@@ -69,7 +69,7 @@ export class PerfilComponent implements OnInit {
         if(img.statusCode && img.statusCode === 400){
           Swal.fire('Error', img.message, 'error');
         }else{
-          this.usuario.imagen = img
+          this.usuario.image = img
           Swal.fire('Guardado', 'Imagen subida con éxito', 'success');
         }
       }).catch(error => {

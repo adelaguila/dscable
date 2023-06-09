@@ -1,0 +1,33 @@
+.demo-table {
+  width: 100%;
+}
+
+.mat-column-image{
+  width: 50px;
+  border-right: 1px solid currentColor;
+  /* padding-right: 24px; */
+  text-align: center;
+}
+
+.mat-column-id{
+  width: 60px;
+  /* border-right: 1px solid currentColor; */
+  /* padding-right: 24px; */
+  text-align: left;
+}
+
+.mat-column-fullName {
+  min-width: 100px;
+}
+
+.mat-column-email {
+  min-width: 100px;
+}
+
+.mat-column-roles {
+  width: 150px;
+}
+
+.mat-column-isActive {
+  width: 50px;
+}

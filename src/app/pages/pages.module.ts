@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { ComponentsModule } from '../components/components.module';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TercerosComponent } from './terceros/terceros.component';
@@ -11,6 +12,8 @@ import { PagesComponent } from './pages.component';
 import { ViasComponent } from './vias/vias.component';
 import { PlanesComponent } from './planes/planes.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+
 
 
 @NgModule({
@@ -20,7 +23,8 @@ import { PerfilComponent } from './perfil/perfil.component';
     PagesComponent,
     ViasComponent,
     PlanesComponent,
-    PerfilComponent
+    PerfilComponent,
+    UsuariosComponent
   ],
   imports: [
     CommonModule,
@@ -28,6 +32,7 @@ import { PerfilComponent } from './perfil/perfil.component';
     ReactiveFormsModule,
     RouterModule,
     SharedModule,
+    ComponentsModule
   ],
   exports: [
     DashboardComponent,
@@ -36,4 +41,4 @@ import { PerfilComponent } from './perfil/perfil.component';
   ]
 })
 export class PagesModule { }
-30165150
+

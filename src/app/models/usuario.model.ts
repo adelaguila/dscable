@@ -7,16 +7,17 @@ export class Usuario {
   constructor(
     public email: string,
     public fullName: string,
+    public isActive: boolean,
+    public roles: string,
     public password?: string,
     public google?: boolean,
-    public roles?: string,
-    public imagen?: string,
+    public image?: string,
     public id?: string
   ) {}
 
   get imagenUrl() {
-    if (this.imagen) {
-      return `${apiUrl}/files/user/${this.imagen}`;
+    if (this.image) {
+      return `${apiUrl}/files/user/${this.image}`;
     } else {
       return `${apiUrl}/files/user/default.jpg`;
     }

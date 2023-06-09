@@ -28,14 +28,39 @@ export class FileUploadService {
       });
 
       const data = await resp.json();
-      if(data.userActualizado){
+      if (data.userActualizado) {
         return data.userActualizado.image;
-      }else{
+      } else {
         return data;
       }
-
     } catch (error) {
-      console.log('Servicio ',error);
+      console.log('Servicio ', error);
+      return false;
+    }
+  }
+
+  async cambiarFotoUsuario(archivo: File, id: string) {
+    try {
+      const url = `${apiUrl}/files/change-img-user/${id}`;
+      const formData = new FormData();
+      formData.append('file', archivo);
+
+      const resp = await fetch(url, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${this.token}`,
+        },
+        body: formData,
+      });
+
+      const data = await resp.json();
+      if (data.userActualizado) {
+        return data.userActualizado.image;
+      } else {
+        return data;
+      }
+    } catch (error) {
+      console.log('Servicio ', error);
       return false;
     }
   }

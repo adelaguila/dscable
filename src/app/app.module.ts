@@ -9,20 +9,23 @@ import { PagesModule } from './pages/pages.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Util } from './shared/util';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NopagefoundComponent
+    NopagefoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AuthModule,
     PagesModule,
-    SweetAlert2Module.forRoot()
+    SweetAlert2Module.forRoot(),
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [Util],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
