@@ -1,0 +1,26 @@
+.demo-table {
+  width: 100%;
+}
+
+.mat-column-id{
+  width: 100px;
+  text-align: left;
+}
+
+.mat-column-isActive {
+  width: 50px;
+}
+
+.mat-column-preciodia {
+  width: 100px;
+  text-align: right;
+}
+
+.mat-column-precioperiodo {
+  width: 100px;
+  text-align: right;
+}
+
+.mat-column-accion {
+  width: 120px;
+}

@@ -8,6 +8,7 @@ import { ViasComponent } from './vias/vias.component';
 import { AuthGuard } from '../guards/auth.guard';
 import { PerfilComponent } from './perfil/perfil.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { CajasnapComponent } from './cajasnap/cajasnap.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'terceros',
         component: TercerosComponent, data: { titulo: 'Terceros'}
+      },
+      {
+        path: 'cajasnap',
+        component: CajasnapComponent, data: { titulo: 'Cajas Nap'}
       },
       {
         path: 'planes',

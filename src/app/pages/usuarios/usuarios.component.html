@@ -162,16 +162,10 @@
               <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
             </table>
           </div>
-
-
           <mat-paginator [pageSizeOptions]="pageSizeOptions" [length]="resultsLength" [pageSize]="10"
             (page)="pageEvent = $event">
           </mat-paginator>
         </div>
-
-
       </div>
-
-
     </div>
   </div>

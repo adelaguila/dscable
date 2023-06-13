@@ -13,7 +13,9 @@ import { ViasComponent } from './vias/vias.component';
 import { PlanesComponent } from './planes/planes.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
-
+import { PlanesFormComponent } from './planes/planes-form/planes-form.component';
+import { CajasnapComponent } from './cajasnap/cajasnap.component';
+import { CajasnapFormComponent } from './cajasnap/cajasnap-form/cajasnap-form.component';
 
 
 @NgModule({
@@ -24,7 +26,11 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
     ViasComponent,
     PlanesComponent,
     PerfilComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    PlanesFormComponent,
+    CajasnapComponent,
+    CajasnapFormComponent,
+
   ],
   imports: [
     CommonModule,

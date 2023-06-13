@@ -9,14 +9,14 @@
   <div class="col-12">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Planes</h4>
-        <h6 class="card-subtitle">Mantenimiento de planes</h6>
+        <h4 class="card-title">Cajas nap</h4>
+        <h6 class="card-subtitle">Mantenimiento de cajas nap</h6>
         <div class="m-t-20">
           <div class="d-flex">
             <div class="mr-auto">
               <div class="form-group">
-                <button id="demo-btn-addrow" class="btn btn-primary btn-sm" (click)="crearPlan()"><i class="icon wb-plus"
-                    aria-hidden="true"></i>Nuevo plan
+                <button id="demo-btn-addrow" class="btn btn-primary btn-sm" (click)="crearCajanap()"><i class="icon wb-plus"
+                    aria-hidden="true"></i>Nueva Caja Nap
                 </button>
                 &nbsp;
                 <button *ngIf="!flagBuscar" id="demo-btn-addrow" class="btn btn-outline-secondary btn-sm"
@@ -43,23 +43,23 @@
             <form class="form-horizontal">
 
               <div class="form-group row">
-                <label for="exampleInputuname3" class="col-sm-3 control-label">ID de plan</label>
+                <label for="exampleInputuname3" class="col-sm-3 control-label">ID de cajanap</label>
                 <div class="col-sm-9">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="fa fa-filter"></i></div>
                     <input type="text" class="form-control form-control-sm" id="exampleInputuname3"
-                      (keyup)="typeHeadFilter.next([$event.target, 'id', '$eq'])" placeholder="Id Plan">
+                      (keyup)="typeHeadFilter.next([$event.target, 'id', '$eq'])" placeholder="Id Cajanap">
                   </div>
                 </div>
               </div>
 
               <div class="form-group row">
-                <label for="exampleInputuname3" class="col-sm-3 control-label">Nombre de plan</label>
+                <label for="exampleInputuname3" class="col-sm-3 control-label">Nombre de caja nap</label>
                 <div class="col-sm-9">
                   <div class="input-group">
                     <div class="input-group-addon"><i class="fa fa-filter"></i></div>
                     <input type="text" class="form-control form-control-sm" id="exampleInputuname3"
-                      (keyup)="typeHeadFilter.next([$event.target, 'nombreplan', '$ilike'])" placeholder="Nombre de plan">
+                      (keyup)="typeHeadFilter.next([$event.target, 'nombrecajanap', '$ilike'])" placeholder="Nombre de caja nap">
                   </div>
                 </div>
               </div>
@@ -69,7 +69,7 @@
 
         <div class="example-container mat-elevation-z8 m-t-10">
           <div class="example-table-container">
-            <table class="hover-table" mat-table [dataSource]="data" matSort matSortActive="nombreplan"
+            <table class="hover-table" mat-table [dataSource]="data" matSort matSortActive="nombrecajanap"
               matSortDirection="asc" class="mat-elevation-z8 demo-table">
 
               <ng-container matColumnDef="id">
@@ -77,38 +77,32 @@
                 <td mat-cell *matCellDef="let row">{{ row.id }}</td>
               </ng-container>
 
-              <ng-container matColumnDef="nombreplan">
+              <ng-container matColumnDef="nombrecajanap">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>
-                  Nombre de plan
+                  Nombre de caja nap
                 </th>
-                <td mat-cell *matCellDef="let row">{{ row.nombreplan }}</td>
+                <td mat-cell *matCellDef="let row">{{ row.nombrecajanap }}</td>
               </ng-container>
 
-              <ng-container matColumnDef="preciodia">
+              <ng-container matColumnDef="ubicacion">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>
-                  Precio día
+                  Ubicacion
                 </th>
-                <td mat-cell *matCellDef="let row">{{ row.preciodia }}</td>
+                <td mat-cell *matCellDef="let row">{{ row.ubicacion }}</td>
               </ng-container>
 
-              <ng-container matColumnDef="precioperiodo">
+              <ng-container matColumnDef="referencia">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>
-                  Precio periodo
+                  Referencia
                 </th>
-                <td mat-cell *matCellDef="let row">{{ row.precioperiodo|number:'1.0-3' }}</td>
+                <td mat-cell *matCellDef="let row">{{ row.referencia }}</td>
               </ng-container>
 
-              <!-- Nombres Column -->
-              <ng-container matColumnDef="isActive">
+              <ng-container matColumnDef="puertos">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>
-                  Estado
+                  Puertos
                 </th>
-                <td mat-cell *matCellDef="let row">
-                  <button type="button" *ngIf="row.isActive" class="btn waves-effect waves-light btn-sm btn-success" (click)="cambiarEstado(row)"><i
-                    class="fa fa-check"></i></button>
-                  <button type="button" *ngIf="!row.isActive" class="btn waves-effect waves-light btn-sm btn-danger" (click)="cambiarEstado(row)"><i
-                    class="fa fa-close"></i></button>
-                </td>
+                <td mat-cell *matCellDef="let row">{{ row.puertos }}</td>
               </ng-container>
 
               <ng-container matColumnDef="accion">

@@ -13,6 +13,7 @@ export class SidebarService {
       submenu: [
         { titulo: 'Main', url: '/'},
         { titulo: 'Terceros', url: 'terceros'},
+        { titulo: 'Cajas Nap', url: 'cajasnap'},
         { titulo: 'Vias', url: 'vias'},
         { titulo: 'Planes', url: 'planes'},
         { titulo: 'Usuarios', url: 'usuarios'},

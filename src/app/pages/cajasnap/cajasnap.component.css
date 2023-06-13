@@ -7,6 +7,11 @@
   text-align: left;
 }
 
+.mat-column-puertos {
+  width: 100px;
+  text-align: right;
+}
+
 .mat-column-accion {
   width: 120px;
 }
